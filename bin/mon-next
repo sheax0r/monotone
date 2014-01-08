@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'monotone'
+unless ARGV.size == 1
+  puts 'Usage: mon-next [KEY]'
+  exit 1
+end
+puts Monotone.next ARGV[0]

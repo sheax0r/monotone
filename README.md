@@ -1,12 +1,13 @@
-# Monotonous
+# Monotone
 
-TODO: Write a gem description
+Gem to generate increasing numbers. Numbers are stored on the local filesystem, in ~/.monotone.
+Also includes a CLI. I use it for generating BUILD_NUMBER-like numbers outside of the context of Jenkins jobs.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'monotonous'
+    gem 'monotone'
 
 And then execute:
 
@@ -14,11 +15,27 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install monotonous
+    $ gem install monotone
 
 ## Usage
+### Ruby
+```ruby
+require 'monotone'
+Monotone.next 'key'     # Returns 0
+Monotone.next 'key'     # Returns 1
+Monotone.set 'key', 0   # Returns 0
+Monotone.next 'key'     # Returns 1
+```
 
-TODO: Write usage instructions here
+### CLI
+```bash
+mon-next key    # Returns 0
+mon-next key    # Returns 1
+mon-set  key 0  # Returns 0
+mon-next key    # Returns 1
+```
+
+
 
 ## Contributing
 
