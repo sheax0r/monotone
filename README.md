@@ -23,7 +23,7 @@ Or install it yourself as:
 require 'monotone'
 Monotone.next 'key'     # Returns 0
 Monotone.next 'key'     # Returns 1
-Monotone.set 'key', 0   # Returns 0
+Monotone.set  'key', 0  # Returns 0
 Monotone.next 'key'     # Returns 1
 ```
 
