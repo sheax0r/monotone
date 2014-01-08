@@ -29,10 +29,10 @@ Monotone.next 'key'     # Returns 1
 
 ### CLI
 ```bash
-mon-next key    # Returns 0
-mon-next key    # Returns 1
-mon-set  key 0  # Returns 0
-mon-next key    # Returns 1
+monotone next key    # Prints 0
+monotone next key    # Prints 1
+monotone set  key 0  # Prints 0
+monotone next key    # Prints 1
 ```
 
 

@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'monotone'
+
+def usage
+  puts 'Usage: monotone [next|set] key [value]'
+  exit 1
+end
+
+if ARGV.size > 0
+  if ARGV[0] == 'next'
+    usage unless ARGV.size == 2
+    puts Monotone.next ARGV[1]
+  elsif ARGV[0] == 'set'
+    usage unless ARGV.size == 3
+    puts Monotone.set ARGV[1], ARGV[2].to_i
+  else
+    usage
+  end
+else
+  usage
+end

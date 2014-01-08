@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-require 'monotone'
-unless ARGV.size == 2
-  puts 'Usage: mon-set [KEY] [VALUE]'
-  exit 1
-end
-puts Monotone.set ARGV[0], ARGV[1].to_i
