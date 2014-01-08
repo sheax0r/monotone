@@ -34,7 +34,7 @@ module Monotone
       synchronize do
         file = File.join(root_dir, name).tap do |file|
           unless File.file?(file)
-            File.write(file, '0')
+            File.write(file, '-1')
           end
         end
         block.yield(file)
